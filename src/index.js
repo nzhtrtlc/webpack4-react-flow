@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import TestComponent from './TestComponent';
-import './main.scss';
+import './scss/main.scss';
 
 if (module.hot) {
    module.hot.accept();
