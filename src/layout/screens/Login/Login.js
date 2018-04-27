@@ -1,12 +1,10 @@
-import React from 'react';
-import { fakeAuth } from 'Helper/fakeAuth';
+import React from 'react'
+import { fakeAuth } from 'Helper/fakeAuth'
+import Button from 'Components/Button'
+import { Redirect } from 'react-router-dom'
 
 
 class Login extends React.Component {
-
-    componentDidMount() {
-        //console.log('Mount oldu');
-    }
 
     state = {
         redirectToReferer: false
@@ -17,17 +15,22 @@ class Login extends React.Component {
             this.setState({
                 redirectToReferer: true
             })
-        });
+        })
     }
 
 
     render() {
         const { redirectToReferer } = this.state;
+        if (redirectToReferer === true) {
+            return <Redirect to='/' />
+        }
         return (
             <div>
                 <p>You must log in to view this page</p>
                 {redirectToReferer}
-                <button onClick={this.login}>Login</button>
+                <div>
+                    <Button primary children="Login" onClick={this.login} />
+                </div>
             </div>
         )
     }
