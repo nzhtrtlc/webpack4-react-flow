@@ -29,7 +29,9 @@ class Login extends React.Component {
                 <p>You must log in to view this page</p>
                 {redirectToReferer}
                 <div>
-                    <Button primary children="Login" onClick={this.login} />
+                    <Button primary onClick={this.login}>
+                        Login
+                    </Button>
                 </div>
             </div>
         )
