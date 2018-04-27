@@ -8,12 +8,16 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
         fakeAuth.isAuthenticated == true
             ? <Component {...props} />
             :
-            <Redirect to="/login"/>
-    )}/>
+            <Redirect to={{
+                pathname: '/login',
+                state: { from: props.location.pathname }
+            }} />
+    )} />
 );
 
 PrivateRoute.propTypes = {
-    component: PropTypes.node
+    component: PropTypes.func,
+    location: PropTypes.object
 }
 
 export default PrivateRoute;
