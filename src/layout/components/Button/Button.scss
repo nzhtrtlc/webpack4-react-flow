@@ -1,24 +1,16 @@
-.btn{
-   font-size: 1em;
-   margin: 1em;
-   padding: 0.25em 1em;
-   border-radius: 3px;
-   &:hover{
-      cursor: pointer;
-   }
-   &:focus{
-      background: blue;
-   }
-   &:active{
-      background: blue;
-   }
+.btn {
+  font-size: 1em;
+  padding: 0.25em 1em;
+  border-radius: 3px;
+  &:hover {
+    cursor: pointer;
+  }
+  &-primary {
+    background: rgb(11, 156, 11);
+    color: white;
+  }
 
-   &-primary{
-      background: green;
-      color: white;
-   }
-
-   &-transparent{
-      background: transparent;
-   }
+  &-transparent {
+    background: transparent;
+  }
 }
