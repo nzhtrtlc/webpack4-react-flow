@@ -5,7 +5,7 @@ import { fakeAuth } from 'Helper/fakeAuth'
 class Login extends React.Component {
 
    componentDidMount(){
-      console.log('Mount oldu');
+      //console.log('Mount oldu');
    }
 
    state = {
@@ -26,6 +26,7 @@ class Login extends React.Component {
       return(
          <div>
             <p>You must log in to view this page</p>
+            {redirectToReferer}
             <button onClick={this.login}>Login</button>
          </div>
       )

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './Button.scss';
 
 const Button = (props) => {
-   const { transparent, primary, disabled, children, style, onClick } = props;
+   const { transparent, primary, disabled, children } = props;
    return (
       <button
          {...props}
