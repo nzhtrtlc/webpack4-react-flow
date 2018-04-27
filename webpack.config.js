@@ -1,10 +1,19 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
     template: "./src/index.html"
 });
 
 module.exports = {
+    resolve: {
+        modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+        extensions: ['.js', '.jsx', '.json'],
+        alias: {
+            Components: path.resolve(__dirname, 'src/layout/components'),
+            Helper: path.resolve(__dirname, 'src/provider/helper')
+        }
+    },
     module: {
         rules: [
             {
@@ -30,5 +39,8 @@ module.exports = {
             }
         ]
     },
-    plugins: [htmlPlugin]
+    plugins: [htmlPlugin],
+    devServer: {
+        historyApiFallback: true,
+    }
 };
