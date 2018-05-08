@@ -1,8 +1,8 @@
 import React from 'react';
-import classnames from 'classnames';
+import cn from 'classnames';
 import PropTypes from 'prop-types';
 import './Button.scss';
-import { userProps } from 'Helper/helperFunctions';
+import { getUserProps } from 'Helper/helperFunctions';
 
 const Button = (props) => {
     const { transparent, primary, disabled, children } = props;
@@ -17,12 +17,12 @@ const Button = (props) => {
         }
     ];
 
-    const _props = userProps(props)(...Object.keys(Button.propTypes), 'className');
+    const userProps = getUserProps(props)(...Object.keys(Button.propTypes), 'className');
 
     return (
         <button
-            {..._props}
-            className={classnames(...classNameList)}>
+            {...userProps}
+            className={cn(...classNameList)}>
             {children}
         </button>
     );
