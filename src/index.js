@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'layout/style/main.scss';
-import Header from 'Components/Header';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import Login from 'layout/screens/Login';
 import PrivateRoute from 'routes/PrivateRoute';
@@ -27,7 +26,6 @@ const App = () => (
             <Route path='/public' component={Public}/>
             <Route path='/login' component={Login}/>
             <PrivateRoute path='/protected' component={Protected}/>
-            <Header />
         </div>
     </Router>
 );

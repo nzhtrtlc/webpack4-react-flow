@@ -1,3 +1,72 @@
-.btnContainer {
-  background: red;
+.header {
+  height: 40px;
+  &.sect {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  &-in {
+    background-color: #20825C;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    &-half {
+      background-color: #20825C;
+      margin-left: -15px;
+      margin-right: -15px;
+      height: 100%;
+    }
+    .edge a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      &::before {
+        position: relative;
+        /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+        content: "";
+        display: inline-block;
+        /* By using an em scale, the arrows will size with the font */
+        width: 1em;
+        height: 1em;
+        border-right: 0.2em solid rgb(255, 255, 255);
+        border-top: 0.2em solid rgb(255, 255, 255);
+        transform: rotate(225deg);
+        margin-right: 0.5em;
+      }
+    }
+    .btn {
+      padding: 3px 14px;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      text-decoration: none;
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+    .cal {
+      height: 30px;
+      width: 30px;
+      background-position: center;
+      background-size: cover;
+      margin-right: 10px;
+      a {
+        padding-top: 6px;
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+  h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
